@@ -42,6 +42,10 @@
         console.log(game)
     }
 
+    function deleteGame(listItem){
+        console.log(listItem)
+    }
+
 
 
 
@@ -61,6 +65,11 @@
 
 
             var deleteBtn = document.createElement("button")
+            deleteBtn.innerHTML = "Deletar"
+            deleteBtn.addEventListener("click" , () => deleteGame(item))
+
+
+            item.appendChild(deleteBtn)
 
 
             list.appendChild(item)//adicionar um filho na list
