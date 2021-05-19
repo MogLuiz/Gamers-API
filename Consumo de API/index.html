@@ -13,6 +13,8 @@
     <input type="number" name="year" id="year" placeholder="Ano"><br>
     <input type="number" name="price" id="price" placeholder="Preço"><br>
     <button type="button" onClick="createGame()">Criar</button>
+    <hr>
+    <h4>Editar Game</h4>
 </head>
 <body>
     
@@ -44,7 +46,11 @@
 
     function deleteGame(listItem){
         var id = listItem.getAttribute("data-id")
-        console.log(id)
+        axios.delete("http://localhost:45678/game/" +id).then(response => {
+            alert("Game deletado com sucesso!")
+        }).catch(err => {
+            console.log(err)
+        })
     }
 
 
