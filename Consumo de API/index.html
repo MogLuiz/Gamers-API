@@ -51,6 +51,7 @@
         var id = listItem.getAttribute("data-id")
         axios.delete("http://localhost:45678/game/" +id).then(response => {
             alert("Game deletado com sucesso!")
+            console.log("Game criado conforme o solicidado")
         }).catch(err => {
             console.log(err)
         })
